@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--    
+    <rect x="70" y="0" width="300" height="20" fill="red" transform="rotate(20)" />
+    <polygon points="200,10 250,190 150,190" style="fill:blue;" transform="translate(0 80)"  /> -->
+    <svg
+    width="1000"
+    height="1000"
+    viewBox="0 0 1000 1000"
+    xmlns="http://www.w3.org/2000/svg">
+    
+    <defs>
+      <g id = "septagon" stroke = "black" transform="scale(0.8,0.8), translate(150,150)">
+      <polygon points="200,200, 200,100 300, 200 200,200 300,200 300,300 200,200 300,300 250,350 200,200 250,350 150,350 200,200 150,350 100,300 200,200 100,300 100,200 200,200 100,200 200,100" fill="none" stroke="black">
+     <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 200 200"
+        to="360 200 200"
+        dur="10s"
+        repeatCount="indefinite" />
+    </polygon>
+    </g>
+    </defs>
+     <defs>
+      <g id="rect">
+       <rect width = "350" height = "30", fill="red" transform="rotate(27), translate (350,100)">
+      </g>
+     </defs>
+    <defs>
+      <g id="triangle">
+        <polygon points = "400,330 450,600 350, 600"></polygon>
+      </g>
+    </defs>
+    <use xlink:href = "#septagon"/>
+    <use xlink:href = "#septagon" transform="translate(290,135)"/>
+    <use xlink:href = "#rect"/>
+    <use xlink:href = "#triangle" fill="blue"/>
+    <use xlink:href = "#septagon" transform="translate(-80,-80), scale(0.5,0.5)"/>
+    <use xlink:href = "#septagon" transform="translate(60,-10), scale(0.5,0.5)"/>
+    <use xlink:href = "#rect" transform="translate(-80,-80), scale(0.5,0.5)"/>
+    <use xlink:href = "#triangle" fill="purple" transform="translate(-80,-80), scale(0.5,0.5)"/>
+    <use xlink:href = "#septagon" transform="translate(500,-50), scale(0.3,0.3)"/>
+    <use xlink:href = "#septagon" transform="translate(585,-10), scale(0.3,0.3)"/>
+    <use xlink:href = "#rect" transform="translate(500,-50), scale(0.3,0.3)"/>
+    <use xlink:href = "#triangle" fill="green" transform="translate(500,-50), scale(0.3,0.3)"/>
+  </svg>
+  
+
+</body>
+</html>
